@@ -4,6 +4,37 @@
 
 **디자인 시스템 킷** — TypeScript와 Tailwind CSS로 구축된 재사용 가능한 React UI 컴포넌트, 훅, 유틸리티 모음입니다.
 
+---
+
+## Overview / 개요
+
+### What / 무엇을 만들었는가
+
+보안 관제 플랫폼에서 공통으로 사용되는 UI 패턴을 추출하여 **독립적인 React 컴포넌트 라이브러리**로 구축했습니다. 40개 이상의 UI 컴포넌트, 100+ SVG 아이콘, 커스텀 훅, Tailwind CSS v4 기반 디자인 토큰을 포함합니다.
+
+### Why / 왜 만들었는가
+
+여러 프로젝트에서 동일한 UI(테이블, 필터, 차트, 모달 등)를 반복 구현하는 비효율을 해소하고, **일관된 UI/UX**와 **빠른 개발 속도**를 확보하기 위해 공통 컴포넌트를 하나의 라이브러리로 분리했습니다.
+
+### Key Technical Points / 핵심 기술 포인트
+
+1. **Compound Component 패턴** — Modal, ConfigCard, FormField 등을 서브 컴포넌트 합성 방식으로 설계하고 React Context로 상태를 공유하여, 사용처에서 선언적으로 조합 가능
+2. **Tree-shakeable ESM/CJS 이중 출력** — tsup으로 빌드하며 `package.json` exports를 세분화하여 컴포넌트·훅·유틸리티를 독립 경로로 import 가능
+3. **Tailwind CSS v4 테마 토큰 시스템** — `@theme` 블록과 `@utility` 디렉티브로 디자인 토큰(컬러·타이포그래피·그림자)을 CSS 레벨에서 정의하여 한 줄 import로 전체 테마 적용
+
+### Demo / 데모
+
+```bash
+git clone https://github.com/happy2870/dsk.git
+cd dsk
+npm install --legacy-peer-deps  # Storybook 10이 아직 Vite 8을 공식 지원하지 않아 peer dep 충돌 우회
+npm run storybook               # → http://localhost:6006
+```
+
+> Storybook 10 기반으로 전체 컴포넌트의 인터랙티브 문서와 시각적 테스트를 제공합니다.
+
+---
+
 ## Features / 주요 기능
 
 - 40+ production-ready UI components / 40개 이상의 프로덕션 레디 UI 컴포넌트
