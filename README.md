@@ -199,6 +199,7 @@ const useCounterStore = createStore('counter', (set) => ({
 | Path / 경로 | Description / 설명 |
 |------|-------------|
 | `@happy2870/dsk` | Root — utils, hooks, providers, stores / 루트 |
+| `@happy2870/dsk/css` | Base CSS — Tailwind v4 theme tokens, typography, fonts / 기본 CSS |
 | `@happy2870/dsk/components/ui` | UI components / UI 컴포넌트 (Button, Modal, Table 등) |
 | `@happy2870/dsk/components/icons` | Icon system / 아이콘 시스템 |
 | `@happy2870/dsk/components/layout` | Layout / 레이아웃 (Header, Footer, Title) |
@@ -259,7 +260,7 @@ src/
 
 - **Compound Components** — Modal, Header, FormField use sub-component composition / 서브 컴포넌트 합성 패턴
 - **Icon Namespace** — `Icon.Edit`, `Icon.Search` for intuitive access / 직관적 접근을 위한 네임스페이스
-- **Tailwind-First** — No CSS files, pure utility class styling / CSS 파일 없이 유틸리티 클래스만 사용
+- **Tailwind-First** — Utility class styling with Tailwind CSS v4 theme tokens / Tailwind CSS v4 테마 토큰 기반 유틸리티 클래스 스타일링
 - **Context-Based State** — FormField, Modal leverage React Context / React Context 활용
 - **Ctrl/Shift Selection** — Table and MultiSearchSelect support range selection / 범위 선택 지원
 

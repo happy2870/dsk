@@ -1,4 +1,5 @@
-import CountUp from "react-countup";
+import CountUpModule from 'react-countup';
+const CountUp = ('default' in CountUpModule ? (CountUpModule as any).default : CountUpModule) as typeof CountUpModule;
 import { Icon } from '../../icons';
 
 type StatItem = {

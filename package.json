@@ -105,6 +105,7 @@
     "react": "^19.2.4",
     "react-countup": "^6.5.3",
     "react-dom": "^19.2.4",
+    "react-is": "^19.2.4",
     "react-tooltip": "^5.30.0",
     "recharts": "^3.8.0",
     "simplebar-react": "^3.3.2",

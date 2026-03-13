@@ -1,7 +1,8 @@
 'use client';
 
 import { PieChart, Pie, Cell } from 'recharts';
-import CountUp from 'react-countup';
+import CountUpModule from 'react-countup';
+const CountUp = ('default' in CountUpModule ? (CountUpModule as any).default : CountUpModule) as typeof CountUpModule;
 
 export type DonutChartData = {
   value: number;

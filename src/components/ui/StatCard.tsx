@@ -1,7 +1,8 @@
 'use client';
 
 import type { ComponentType, ReactNode } from 'react';
-import CountUp from 'react-countup';
+import CountUpModule from 'react-countup';
+const CountUp = ('default' in CountUpModule ? (CountUpModule as any).default : CountUpModule) as typeof CountUpModule;
 
 export interface StatCardItem {
   title: string;
