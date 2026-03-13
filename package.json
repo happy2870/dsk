@@ -1,0 +1,131 @@
+{
+  "name": "@happy2870/dsk",
+  "version": "0.1.0",
+  "description": "Design System Kit — A collection of reusable React UI components, hooks, and utilities built with Tailwind CSS",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./components": {
+      "import": "./dist/components/index.js",
+      "require": "./dist/components/index.cjs",
+      "types": "./dist/components/index.d.ts"
+    },
+    "./components/ui": {
+      "import": "./dist/components/ui/index.js",
+      "require": "./dist/components/ui/index.cjs",
+      "types": "./dist/components/ui/index.d.ts"
+    },
+    "./components/icons": {
+      "import": "./dist/components/icons/index.js",
+      "require": "./dist/components/icons/index.cjs",
+      "types": "./dist/components/icons/index.d.ts"
+    },
+    "./components/layout": {
+      "import": "./dist/components/layout/index.js",
+      "require": "./dist/components/layout/index.cjs",
+      "types": "./dist/components/layout/index.d.ts"
+    },
+    "./components/error": {
+      "import": "./dist/components/error/index.js",
+      "require": "./dist/components/error/index.cjs",
+      "types": "./dist/components/error/index.d.ts"
+    },
+    "./hooks": {
+      "import": "./dist/hooks/index.js",
+      "require": "./dist/hooks/index.cjs",
+      "types": "./dist/hooks/index.d.ts"
+    },
+    "./providers": {
+      "import": "./dist/providers/index.js",
+      "require": "./dist/providers/index.cjs",
+      "types": "./dist/providers/index.d.ts"
+    },
+    "./stores": {
+      "import": "./dist/stores/index.js",
+      "require": "./dist/stores/index.cjs",
+      "types": "./dist/stores/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types/index.js",
+      "require": "./dist/types/index.cjs",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/utils/index.js",
+      "require": "./dist/utils/index.cjs",
+      "types": "./dist/utils/index.d.ts"
+    },
+    "./constants": {
+      "import": "./dist/constants/index.js",
+      "require": "./dist/constants/index.cjs",
+      "types": "./dist/constants/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@floating-ui/react": "^0.27.17",
+    "driver.js": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tsup": "^8.4.0",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "@tanstack/react-query": ">=5",
+    "clsx": ">=2",
+    "framer-motion": ">=12",
+    "react-countup": ">=6",
+    "react-tooltip": ">=5",
+    "recharts": ">=3",
+    "simplebar-react": ">=3",
+    "tailwind-merge": ">=3",
+    "zustand": ">=5"
+  },
+  "peerDependenciesMeta": {
+    "@tanstack/react-query": { "optional": true },
+    "framer-motion": { "optional": true },
+    "react-countup": { "optional": true },
+    "react-tooltip": { "optional": true },
+    "recharts": { "optional": true },
+    "simplebar-react": { "optional": true },
+    "zustand": { "optional": true }
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "design-system",
+    "tailwind",
+    "typescript"
+  ],
+  "author": "happy2870",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/happy2870/dsk.git"
+  }
+}
