@@ -1,0 +1,196 @@
+/* ============================================
+ * @happy2870/dsk — Base Styles
+ * Tailwind CSS v4 theme tokens & utilities
+ *
+ * Usage (in consuming app's global CSS):
+ *   @import '@happy2870/dsk/css';
+ * ============================================ */
+
+/* ============================================
+ * Shared Fonts (CDN)
+ * ============================================ */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: 500;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* ============================================
+ * Theme — Colors
+ * ============================================ */
+@theme {
+  /* --- Neutral --- */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-third: #e9e9e9;
+  --color-error: #ff0000;
+
+  /* --- Point Colors --- */
+  --color-point-orange: #ffa500;
+  --color-point-orange-deep: #ff6600;
+  --color-point-orange-bg: #fff3e5;
+  --color-point-orange-deep-bg: #fff1e7;
+  --color-point-brown: #aa9582;
+  --color-point-brown-bg: #f9f4f0;
+  --color-point-purple: #5f00be;
+  --color-point-navy: #424882;
+  --color-point-green: #31b04d;
+  --color-point-blue-light: #ebf3ff;
+  --color-point-red-light: #fff3f2;
+  --color-point-green-bg: #eaf7ed;
+
+  /* --- Gray Scale --- */
+  --color-gray-0: #000000;
+  --color-gray-2: #222222;
+  --color-gray-4: #444444;
+  --color-gray-6: #666666;
+  --color-gray-8: #888888;
+  --color-gray-a: #aaaaaa;
+  --color-gray-c: #cccccc;
+  --color-gray-d: #dddddd;
+  --color-gray-e: #eeeeee;
+  --color-gray-e9: #e9e9e9;
+  --color-gray-f4: #f4f4f4;
+  --color-gray-f7: #f7f7f7;
+
+  /* --- Component Token Colors (C-*) --- */
+  --color-C-Primary: #0069ff;
+  --color-C-Secondary: #666666;
+  --color-C-Error: #ff0000;
+  --color-C-Gray-0: #000000;
+  --color-C-Gray-2: #222222;
+  --color-C-Gray-4: #444444;
+  --color-C-Gray-6: #666666;
+  --color-C-Gray-8: #888888;
+  --color-C-Gray-A: #aaaaaa;
+  --color-C-Gray-C: #cccccc;
+  --color-C-Gray-D: #dddddd;
+  --color-C-Gray-E: #eeeeee;
+  --color-C-Gray-E9: #e9e9e9;
+  --color-C-Gray-F4: #f4f4f4;
+  --color-C-Gray-F7: #f7f7f7;
+  --color-C-Black: #000000;
+  --color-C-White: #ffffff;
+  --color-C-Third: #e9e9e9;
+  --color-C-White-Border: #cccccc;
+  --color-C-Dim: rgba(0, 0, 0, 0.6);
+
+  /* --- Alpha --- */
+  --color-alpha-8: #00000014;
+
+  /* --- Font Family --- */
+  --font-pretendard: 'Pretendard', sans-serif;
+  --font-sans: 'Pretendard', sans-serif;
+  --font-gmarket: 'GmarketSans', 'Pretendard', sans-serif;
+
+  /* --- Box Shadow --- */
+  --shadow-design-system: 0 1.25px 5px 0 #0000000a;
+  --shadow-card: 0px 1.25px 5px 0px rgba(0, 0, 0, 0.04);
+
+  /* --- Border Radius --- */
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+}
+
+/* ============================================
+ * Typography Utilities
+ * ============================================ */
+
+/* Pretendard - Title */
+@utility text-title-30-b { font-size: 30px; line-height: 38px; font-weight: 700; }
+@utility text-title-30-r { font-size: 30px; line-height: 38px; font-weight: 400; }
+@utility text-title-24-b { font-size: 24px; line-height: 32px; font-weight: 700; }
+@utility text-title-24-m { font-size: 24px; line-height: 32px; font-weight: 500; }
+@utility text-title-22-b { font-size: 22px; line-height: 30px; font-weight: 700; }
+@utility text-title-22-r { font-size: 22px; line-height: 30px; font-weight: 400; }
+@utility text-title-20-b { font-size: 20px; line-height: 28px; font-weight: 700; }
+@utility text-title-20-r { font-size: 20px; line-height: 28px; font-weight: 400; }
+@utility text-title-18-b { font-size: 18px; line-height: 26px; font-weight: 700; }
+@utility text-title-18-r { font-size: 18px; line-height: 26px; font-weight: 400; }
+
+/* Pretendard - Body */
+@utility text-body-16-b { font-size: 16px; line-height: 24px; font-weight: 700; }
+@utility text-body-16-r { font-size: 16px; line-height: 24px; font-weight: 400; }
+@utility text-body-14-b { font-size: 14px; line-height: 20px; font-weight: 700; }
+@utility text-body-14-r { font-size: 14px; line-height: 20px; font-weight: 400; }
+@utility text-body-12-b { font-size: 12px; line-height: 18px; font-weight: 700; }
+@utility text-body-12-r { font-size: 12px; line-height: 18px; font-weight: 400; }
+@utility text-body-10-b { font-size: 10px; line-height: 16px; font-weight: 700; }
+@utility text-body-10-r { font-size: 10px; line-height: 16px; font-weight: 400; }
+
+/* GMarket Sans - Number */
+@utility text-num-48-b { font-size: 48px; line-height: 56px; font-weight: 700; }
+@utility text-num-40-b { font-size: 40px; line-height: 48px; font-weight: 700; }
+@utility text-num-36-b { font-size: 36px; line-height: 44px; font-weight: 700; }
+@utility text-num-30-b { font-size: 30px; line-height: 38px; font-weight: 700; }
+@utility text-num-30-m { font-size: 30px; line-height: 38px; font-weight: 500; }
+@utility text-num-24-b { font-size: 24px; line-height: 32px; font-weight: 700; }
+@utility text-num-18-b { font-size: 18px; line-height: 26px; font-weight: 700; }
+@utility text-num-18-m { font-size: 18px; line-height: 26px; font-weight: 500; }
+@utility text-num-16-b { font-size: 16px; line-height: 24px; font-weight: 700; }
+@utility text-num-16-m { font-size: 16px; line-height: 24px; font-weight: 500; }
+@utility text-num-14-b { font-size: 14px; line-height: 20px; font-weight: 700; }
+@utility text-num-14-m { font-size: 14px; line-height: 20px; font-weight: 500; }
+@utility text-num-12-b { font-size: 12px; line-height: 18px; font-weight: 700; }
+@utility text-num-12-m { font-size: 12px; line-height: 18px; font-weight: 500; }
+@utility text-num-10-b { font-size: 10px; line-height: 16px; font-weight: 700; }
+@utility text-num-10-m { font-size: 10px; line-height: 16px; font-weight: 500; }
+
+/* ============================================
+ * Custom Utilities
+ * ============================================ */
+.font-gmarket {
+  font-family: 'GmarketSans', 'Pretendard', sans-serif;
+}
+.font-gmarket-medium {
+  font-family: 'GmarketSans', 'Pretendard', sans-serif;
+  font-weight: 500;
+}
+.font-gmarket-bold {
+  font-family: 'GmarketSans', 'Pretendard', sans-serif;
+  font-weight: 700;
+}
+
+/* ============================================
+ * Animations
+ * ============================================ */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes toast-slide-in {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes toast-slide-out {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(100%); }
+}
+.animate-toast-in { animation: toast-slide-in 0.3s ease-out forwards; }
+.animate-toast-out { animation: toast-slide-out 0.2s ease-in forwards; }
