@@ -1,4 +1,4 @@
-import { cn } from "@nextjs-turborepo-starter/common/utils";
+import { cn } from "../../../utils/utils";
 
 type ButtonTabsProps<T extends string = string> = {
   activeTab: T;

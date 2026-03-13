@@ -1,4 +1,4 @@
-import { cn } from '@nextjs-turborepo-starter/common/utils';
+import { cn } from '../../utils/utils';
 import { IconButton } from '../ui/IconButton';
 import { IcQuestion } from '../icons/DsIcons';
 

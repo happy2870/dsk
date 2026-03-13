@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface DownIconProps {
+export interface DownIconProps {
   className?: string;
   size?: number;
 }

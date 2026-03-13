@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface NotificationIconProps {
+export interface NotificationIconProps {
   className?: string;
   size?: number;
   active?: boolean;

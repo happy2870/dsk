@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface EqualIconProps {
+export interface EqualIconProps {
   className?: string;
   size?: number;
 }

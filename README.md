@@ -112,22 +112,51 @@ import { cn, debounce } from '@happy2870/dsk/utils';
 ### Providers / 프로바이더
 
 ```tsx
-import { QueryProvider, ConfirmModalProvider, useConfirmModal } from '@happy2870/dsk/providers';
+import { ConfirmModalProvider, useConfirmModal } from '@happy2870/dsk/providers';
 
 // Wrap your app / 앱을 감싸세요
 function App() {
   return (
-    <QueryProvider>
-      <ConfirmModalProvider>
-        {children}
-      </ConfirmModalProvider>
-    </QueryProvider>
+    <ConfirmModalProvider>
+      {children}
+    </ConfirmModalProvider>
   );
 }
 
 // Use confirm modal anywhere / 어디서든 확인 모달 사용
 const { confirm } = useConfirmModal();
 const ok = await confirm({ title: 'Delete?', message: 'Are you sure?' });
+```
+
+### React Query Setup / React Query 설정
+
+`useServerPagination` and `useInfiniteScroll` hooks require React Query.
+This library does **not** include a QueryProvider — you should configure it in your app with your own settings.
+
+`useServerPagination`과 `useInfiniteScroll` 훅은 React Query가 필요합니다.
+이 라이브러리는 QueryProvider를 **포함하지 않습니다** — 앱에서 직접 설정하세요.
+
+```tsx
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 60 * 1000,  // adjust to your needs / 필요에 맞게 조정
+      retry: 1,
+    },
+  },
+});
+
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ConfirmModalProvider>
+        {children}
+      </ConfirmModalProvider>
+    </QueryClientProvider>
+  );
+}
 ```
 
 ### Store / 스토어

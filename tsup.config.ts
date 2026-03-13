@@ -22,6 +22,9 @@ export default defineConfig({
   external: [
     'react',
     'react-dom',
+    'next',
+    'next/navigation',
+    'next/link',
     '@tanstack/react-query',
     'clsx',
     'framer-motion',
@@ -31,6 +34,7 @@ export default defineConfig({
     'simplebar-react',
     'tailwind-merge',
     'zustand',
+    'zustand/middleware',
   ],
   banner: {
     js: "'use client';",

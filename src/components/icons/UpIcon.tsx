@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface UpIconProps {
+export interface UpIconProps {
   className?: string;
   size?: number;
 }

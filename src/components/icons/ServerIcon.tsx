@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface ServerIconProps {
+export interface ServerIconProps {
   className?: string;
   size?: number;
 }
